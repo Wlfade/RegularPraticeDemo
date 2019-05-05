@@ -108,7 +108,7 @@
         NSRange newRange = NSMakeRange(range.location - totalLengthChanged, range.length);
         //可变字符串替换字符串
         [attSummary replaceCharactersInRange:newRange withAttributedString:imageAttrString];
-        //长度变了 就是 检索到的 范围的字符变成了一个表情 长度变成了 1 少的长度 就是 原来长度 - 1
+        //长度变了 就是 检索到的 范围的字符变成了一个表情 长度变成了 1 的长度 就是 原来长度 - 1
         NSUInteger lengthChanged = range.length - 1;
         //一共少了的长度
         totalLengthChanged += lengthChanged;
@@ -173,7 +173,7 @@
     }
     NSLog(@"%@",resultArray);
     
-    
+    //这是一个简单的替换 对项目没有什么实质的作用
     NSString* resultString = [regex stringByReplacingMatchesInString:summary options:NSMatchingReportProgress range:NSMakeRange(0, [summary length]) withTemplate:@"图片"];
     
     NSLog(@"%@",resultString);
