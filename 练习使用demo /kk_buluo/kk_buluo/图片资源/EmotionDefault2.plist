@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>position</key>
+	<array>
+		<array>
+			<string>hongdan</string>
+			<string>heidan</string>
+			<string>dl</string>
+			<string>xzk</string>
+			<string>bt</string>
+			<string>dy</string>
+			<string>jy</string>
+			<string>mmp</string>
+			<string>guoqi</string>
+			<string>like</string>
+			<string>cry</string>
+			<string>xjbt</string>
+			<string>kb</string>
+			<string>angry</string>
+			<string>wrg</string>
+			<string>rc</string>
+			<string>yc</string>
+			<string>coupon</string>
+			<string>knife</string>
+			<string>goal</string>
+		</array>
+		<array>
+			<string>cgqz</string>
+			<string>boom</string>
+			<string>lq</string>
+			<string>zq</string>
+			<string>facai</string>
+			<string>hongzhong</string>
+			<string>v5</string>
+			<string>beer</string>
+			<string>qz</string>
+			<string>md</string>
+			<string>good</string>
+			<string>js</string>
+			<string>jiaqiu</string>
+			<string>guo</string>
+			<string>zu</string>
+			<string>bi</string>
+			<string>sheng</string>
+			<string>jia</string>
+			<string>you</string>
+			<string>lc</string>
+		</array>
+		<array>
+			<string>chicken</string>
+			<string>guihua</string>
+		</array>
+	</array>
+</dict>
+</plist>
