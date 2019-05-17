@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3038B373B1B9E8BF8F7FA925 /* libPods-LQPhotoAlbun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C258E750B2FAB47D16CEEE1E /* libPods-LQPhotoAlbun.a */; };
+		DBAC72F220A2F8CE00B17E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC72F120A2F8CE00B17E4C /* AppDelegate.m */; };
+		DBAC72F520A2F8CE00B17E4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC72F420A2F8CE00B17E4C /* ViewController.m */; };
+		DBAC72F820A2F8CE00B17E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAC72F620A2F8CE00B17E4C /* Main.storyboard */; };
+		DBAC72FA20A2F8D100B17E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAC72F920A2F8D100B17E4C /* Assets.xcassets */; };
+		DBAC72FD20A2F8D100B17E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAC72FB20A2F8D100B17E4C /* LaunchScreen.storyboard */; };
+		DBAC730020A2F8D100B17E4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC72FF20A2F8D100B17E4C /* main.m */; };
+		DBAC730A20A2F8D100B17E4C /* LQPhotoAlbunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC730920A2F8D100B17E4C /* LQPhotoAlbunTests.m */; };
+		DBAC731520A2F8D100B17E4C /* LQPhotoAlbunUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC731420A2F8D100B17E4C /* LQPhotoAlbunUITests.m */; };
+		DBAC732420A2FCD600B17E4C /* PhotoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC732320A2FCD600B17E4C /* PhotoListTableViewCell.m */; };
+		DBAC732720A306A900B17E4C /* photoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC732620A306A900B17E4C /* photoAlbumViewController.m */; };
+		DBAC732A20A306C900B17E4C /* photoAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC732920A306C900B17E4C /* photoAlbumCollectionViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBAC730620A2F8D100B17E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBAC72E520A2F8CE00B17E4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBAC72EC20A2F8CE00B17E4C;
+			remoteInfo = LQPhotoAlbun;
+		};
+		DBAC731120A2F8D100B17E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBAC72E520A2F8CE00B17E4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBAC72EC20A2F8CE00B17E4C;
+			remoteInfo = LQPhotoAlbun;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68B00A86C256D0708F40473A /* Pods-LQPhotoAlbun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LQPhotoAlbun.release.xcconfig"; path = "Pods/Target Support Files/Pods-LQPhotoAlbun/Pods-LQPhotoAlbun.release.xcconfig"; sourceTree = "<group>"; };
+		7939AA7B643FB9D6A3114B48 /* Pods-LQPhotoAlbun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LQPhotoAlbun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LQPhotoAlbun/Pods-LQPhotoAlbun.debug.xcconfig"; sourceTree = "<group>"; };
+		C258E750B2FAB47D16CEEE1E /* libPods-LQPhotoAlbun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LQPhotoAlbun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAC72ED20A2F8CE00B17E4C /* LQPhotoAlbun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LQPhotoAlbun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAC72F020A2F8CE00B17E4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBAC72F120A2F8CE00B17E4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBAC72F320A2F8CE00B17E4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DBAC72F420A2F8CE00B17E4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DBAC72F720A2F8CE00B17E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBAC72F920A2F8D100B17E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBAC72FC20A2F8D100B17E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBAC72FE20A2F8D100B17E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAC72FF20A2F8D100B17E4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBAC730520A2F8D100B17E4C /* LQPhotoAlbunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQPhotoAlbunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAC730920A2F8D100B17E4C /* LQPhotoAlbunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LQPhotoAlbunTests.m; sourceTree = "<group>"; };
+		DBAC730B20A2F8D100B17E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAC731020A2F8D100B17E4C /* LQPhotoAlbunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQPhotoAlbunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAC731420A2F8D100B17E4C /* LQPhotoAlbunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LQPhotoAlbunUITests.m; sourceTree = "<group>"; };
+		DBAC731620A2F8D100B17E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAC732220A2FCD600B17E4C /* PhotoListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoListTableViewCell.h; sourceTree = "<group>"; };
+		DBAC732320A2FCD600B17E4C /* PhotoListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoListTableViewCell.m; sourceTree = "<group>"; };
+		DBAC732520A306A900B17E4C /* photoAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = photoAlbumViewController.h; sourceTree = "<group>"; };
+		DBAC732620A306A900B17E4C /* photoAlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photoAlbumViewController.m; sourceTree = "<group>"; };
+		DBAC732820A306C900B17E4C /* photoAlbumCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = photoAlbumCollectionViewCell.h; sourceTree = "<group>"; };
+		DBAC732920A306C900B17E4C /* photoAlbumCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photoAlbumCollectionViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBAC72EA20A2F8CE00B17E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3038B373B1B9E8BF8F7FA925 /* libPods-LQPhotoAlbun.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730220A2F8D100B17E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730D20A2F8D100B17E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0C96775D266DC3A517CFF18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C258E750B2FAB47D16CEEE1E /* libPods-LQPhotoAlbun.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBAC72E420A2F8CE00B17E4C = {
+			isa = PBXGroup;
+			children = (
+				DBAC72EF20A2F8CE00B17E4C /* LQPhotoAlbun */,
+				DBAC730820A2F8D100B17E4C /* LQPhotoAlbunTests */,
+				DBAC731320A2F8D100B17E4C /* LQPhotoAlbunUITests */,
+				DBAC72EE20A2F8CE00B17E4C /* Products */,
+				FB3ADA4E7FEA5924B7FBDD1C /* Pods */,
+				D0C96775D266DC3A517CFF18 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DBAC72EE20A2F8CE00B17E4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC72ED20A2F8CE00B17E4C /* LQPhotoAlbun.app */,
+				DBAC730520A2F8D100B17E4C /* LQPhotoAlbunTests.xctest */,
+				DBAC731020A2F8D100B17E4C /* LQPhotoAlbunUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBAC72EF20A2F8CE00B17E4C /* LQPhotoAlbun */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC72F020A2F8CE00B17E4C /* AppDelegate.h */,
+				DBAC72F120A2F8CE00B17E4C /* AppDelegate.m */,
+				DBAC72F320A2F8CE00B17E4C /* ViewController.h */,
+				DBAC72F420A2F8CE00B17E4C /* ViewController.m */,
+				DBAC732520A306A900B17E4C /* photoAlbumViewController.h */,
+				DBAC732620A306A900B17E4C /* photoAlbumViewController.m */,
+				DBAC732220A2FCD600B17E4C /* PhotoListTableViewCell.h */,
+				DBAC732320A2FCD600B17E4C /* PhotoListTableViewCell.m */,
+				DBAC732820A306C900B17E4C /* photoAlbumCollectionViewCell.h */,
+				DBAC732920A306C900B17E4C /* photoAlbumCollectionViewCell.m */,
+				DBAC72F620A2F8CE00B17E4C /* Main.storyboard */,
+				DBAC72F920A2F8D100B17E4C /* Assets.xcassets */,
+				DBAC72FB20A2F8D100B17E4C /* LaunchScreen.storyboard */,
+				DBAC72FE20A2F8D100B17E4C /* Info.plist */,
+				DBAC72FF20A2F8D100B17E4C /* main.m */,
+			);
+			path = LQPhotoAlbun;
+			sourceTree = "<group>";
+		};
+		DBAC730820A2F8D100B17E4C /* LQPhotoAlbunTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC730920A2F8D100B17E4C /* LQPhotoAlbunTests.m */,
+				DBAC730B20A2F8D100B17E4C /* Info.plist */,
+			);
+			path = LQPhotoAlbunTests;
+			sourceTree = "<group>";
+		};
+		DBAC731320A2F8D100B17E4C /* LQPhotoAlbunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC731420A2F8D100B17E4C /* LQPhotoAlbunUITests.m */,
+				DBAC731620A2F8D100B17E4C /* Info.plist */,
+			);
+			path = LQPhotoAlbunUITests;
+			sourceTree = "<group>";
+		};
+		FB3ADA4E7FEA5924B7FBDD1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7939AA7B643FB9D6A3114B48 /* Pods-LQPhotoAlbun.debug.xcconfig */,
+				68B00A86C256D0708F40473A /* Pods-LQPhotoAlbun.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBAC72EC20A2F8CE00B17E4C /* LQPhotoAlbun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAC731920A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbun" */;
+			buildPhases = (
+				67F0B8EF2D0222BBFCB9E874 /* [CP] Check Pods Manifest.lock */,
+				DBAC72E920A2F8CE00B17E4C /* Sources */,
+				DBAC72EA20A2F8CE00B17E4C /* Frameworks */,
+				DBAC72EB20A2F8CE00B17E4C /* Resources */,
+				B1A1823FCB1088D4F628F69F /* [CP] Embed Pods Frameworks */,
+				342A63C21E93E8FF73A31D11 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LQPhotoAlbun;
+			productName = LQPhotoAlbun;
+			productReference = DBAC72ED20A2F8CE00B17E4C /* LQPhotoAlbun.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBAC730420A2F8D100B17E4C /* LQPhotoAlbunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAC731C20A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbunTests" */;
+			buildPhases = (
+				DBAC730120A2F8D100B17E4C /* Sources */,
+				DBAC730220A2F8D100B17E4C /* Frameworks */,
+				DBAC730320A2F8D100B17E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBAC730720A2F8D100B17E4C /* PBXTargetDependency */,
+			);
+			name = LQPhotoAlbunTests;
+			productName = LQPhotoAlbunTests;
+			productReference = DBAC730520A2F8D100B17E4C /* LQPhotoAlbunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBAC730F20A2F8D100B17E4C /* LQPhotoAlbunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAC731F20A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbunUITests" */;
+			buildPhases = (
+				DBAC730C20A2F8D100B17E4C /* Sources */,
+				DBAC730D20A2F8D100B17E4C /* Frameworks */,
+				DBAC730E20A2F8D100B17E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBAC731220A2F8D100B17E4C /* PBXTargetDependency */,
+			);
+			name = LQPhotoAlbunUITests;
+			productName = LQPhotoAlbunUITests;
+			productReference = DBAC731020A2F8D100B17E4C /* LQPhotoAlbunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBAC72E520A2F8CE00B17E4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "liang lee";
+				TargetAttributes = {
+					DBAC72EC20A2F8CE00B17E4C = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DBAC730420A2F8D100B17E4C = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = DBAC72EC20A2F8CE00B17E4C;
+					};
+					DBAC730F20A2F8D100B17E4C = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = DBAC72EC20A2F8CE00B17E4C;
+					};
+				};
+			};
+			buildConfigurationList = DBAC72E820A2F8CE00B17E4C /* Build configuration list for PBXProject "LQPhotoAlbun" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBAC72E420A2F8CE00B17E4C;
+			productRefGroup = DBAC72EE20A2F8CE00B17E4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBAC72EC20A2F8CE00B17E4C /* LQPhotoAlbun */,
+				DBAC730420A2F8D100B17E4C /* LQPhotoAlbunTests */,
+				DBAC730F20A2F8D100B17E4C /* LQPhotoAlbunUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBAC72EB20A2F8CE00B17E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAC72FD20A2F8D100B17E4C /* LaunchScreen.storyboard in Resources */,
+				DBAC72FA20A2F8D100B17E4C /* Assets.xcassets in Resources */,
+				DBAC72F820A2F8CE00B17E4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730320A2F8D100B17E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730E20A2F8D100B17E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		342A63C21E93E8FF73A31D11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LQPhotoAlbun/Pods-LQPhotoAlbun-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67F0B8EF2D0222BBFCB9E874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LQPhotoAlbun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A1823FCB1088D4F628F69F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LQPhotoAlbun/Pods-LQPhotoAlbun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBAC72E920A2F8CE00B17E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAC732420A2FCD600B17E4C /* PhotoListTableViewCell.m in Sources */,
+				DBAC72F520A2F8CE00B17E4C /* ViewController.m in Sources */,
+				DBAC730020A2F8D100B17E4C /* main.m in Sources */,
+				DBAC72F220A2F8CE00B17E4C /* AppDelegate.m in Sources */,
+				DBAC732720A306A900B17E4C /* photoAlbumViewController.m in Sources */,
+				DBAC732A20A306C900B17E4C /* photoAlbumCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730120A2F8D100B17E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAC730A20A2F8D100B17E4C /* LQPhotoAlbunTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAC730C20A2F8D100B17E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAC731520A2F8D100B17E4C /* LQPhotoAlbunUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBAC730720A2F8D100B17E4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBAC72EC20A2F8CE00B17E4C /* LQPhotoAlbun */;
+			targetProxy = DBAC730620A2F8D100B17E4C /* PBXContainerItemProxy */;
+		};
+		DBAC731220A2F8D100B17E4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBAC72EC20A2F8CE00B17E4C /* LQPhotoAlbun */;
+			targetProxy = DBAC731120A2F8D100B17E4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBAC72F620A2F8CE00B17E4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBAC72F720A2F8CE00B17E4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBAC72FB20A2F8D100B17E4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBAC72FC20A2F8D100B17E4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBAC731720A2F8D100B17E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBAC731820A2F8D100B17E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBAC731A20A2F8D100B17E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7939AA7B643FB9D6A3114B48 /* Pods-LQPhotoAlbun.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBAC731B20A2F8D100B17E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B00A86C256D0708F40473A /* Pods-LQPhotoAlbun.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBAC731D20A2F8D100B17E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQPhotoAlbun.app/LQPhotoAlbun";
+			};
+			name = Debug;
+		};
+		DBAC731E20A2F8D100B17E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQPhotoAlbun.app/LQPhotoAlbun";
+			};
+			name = Release;
+		};
+		DBAC732020A2F8D100B17E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQPhotoAlbun;
+			};
+			name = Debug;
+		};
+		DBAC732120A2F8D100B17E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoAlbunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newCompany.www.LQPhotoAlbunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQPhotoAlbun;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBAC72E820A2F8CE00B17E4C /* Build configuration list for PBXProject "LQPhotoAlbun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAC731720A2F8D100B17E4C /* Debug */,
+				DBAC731820A2F8D100B17E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBAC731920A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAC731A20A2F8D100B17E4C /* Debug */,
+				DBAC731B20A2F8D100B17E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBAC731C20A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAC731D20A2F8D100B17E4C /* Debug */,
+				DBAC731E20A2F8D100B17E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBAC731F20A2F8D100B17E4C /* Build configuration list for PBXNativeTarget "LQPhotoAlbunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAC732020A2F8D100B17E4C /* Debug */,
+				DBAC732120A2F8D100B17E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBAC72E520A2F8CE00B17E4C /* Project object */;
+}
