@@ -237,7 +237,8 @@
 				4EF6C12E225CA24F00C56EE0 /* EmojiTextAttachment.m */,
 				4EF6C12F225CA24F00C56EE0 /* EmojiTextAttachment.h */,
 			);
-			path = "emoji控件";
+			name = "emoji控件";
+			path = "../../正则表达式和点击的相应/正则表达式和点击的相应/emoji控件";
 			sourceTree = "<group>";
 		};
 		4EF6C130225CA24F00C56EE0 /* 表情二版 */ = {
@@ -287,7 +288,8 @@
 				4EF6C15A225CA24F00C56EE0 /* v5.png */,
 				4EF6C15B225CA24F00C56EE0 /* facai.png */,
 			);
-			path = "表情二版";
+			name = "表情二版";
+			path = "../../正则表达式和点击的相应/正则表达式和点击的相应/表情二版";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
