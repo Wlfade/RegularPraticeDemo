@@ -21,10 +21,18 @@
 
 @property (nonatomic,strong) NSMutableAttributedString *outAttSummary;
 
+@property (nonatomic,strong) NSMutableArray *userRangeMutArr;
 @end
 
 @implementation ViewController
 
+/** userRangeMutArr */
+-(NSMutableArray *)userRangeMutArr{
+    if (_userRangeMutArr == nil) {
+        _userRangeMutArr = [NSMutableArray array];
+    }
+    return _userRangeMutArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -161,6 +169,8 @@
         NSUInteger lengthChanged = range.length - 1;
         //一共少了的长度
         totalLengthChanged += lengthChanged;
+        
+        
     }
     return summaryMutStr;
 }
@@ -255,6 +265,11 @@
         NSUInteger lengthChanged = range.length - nickName.length;
         //一共少了的长度
         totalLengthChanged += lengthChanged;
+        
+        NSRange userIdRange = NSMakeRange(newRange.location, nameAttString.length);
+        
+        [self.userRangeMutArr addObject:NSStringFromRange(userIdRange)];
+
     }
     return summaryMutStr;
 }
@@ -328,50 +343,26 @@
     return YES;
 }
 
-//- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-//    if ([text isEqualToString:@""]) { // 删除
-//        //话题
-////        NSArray *rangeArray = [self getTopicRangeArray:nil];
-//        NSArray *rangeArray = [self getTopicRangeArray:nil];
-//
-//
-//        for (NSInteger i = 0; i < rangeArray.count; i++) {
-//            NSRange tmpRange = NSRangeFromString(rangeArray[i]);
-//            if ((range.location + range.length) == (tmpRange.location + tmpRange.length)) {
-//                if ([NSStringFromRange(tmpRange) isEqualToString:NSStringFromRange(textView.selectedRange)]) {
-//                    // 第二次点击删除按钮 删除
-////                    NSLog(@"打印前%@",self.topicArray);
-////                    [self.topicArray removeObjectAtIndex:rangeArray.count-1];
-////                    NSLog(@"打印后%@",self.topicArray);
-//                    return YES;
-//                } else {
-//                    // 第一次点击删除按钮 选中
-//                    textView.selectedRange = tmpRange;
-//                    return NO;
-//                }
-//            }
-//        }
-//        //@功能
-//        NSArray *rangeArrays = [self getAtRangeArray:nil];
-//        for (NSInteger i = 0; i < rangeArrays.count; i++) {
-//            NSRange tmpRanges = NSRangeFromString(rangeArrays[i]);
-//            if ((range.location + range.length) == (tmpRanges.location + tmpRanges.length)) {
-//                if ([NSStringFromRange(tmpRanges) isEqualToString:NSStringFromRange(textView.selectedRange)]) {
-//                    NSLog(@"打印前%@",self.AtArray);
-//                    [self.AtArray removeObjectAtIndex:rangeArrays.count-1];
-//                    NSLog(@"打印后%@",self.AtArray);
-//                    // 第二次点击删除按钮 删除
-//                    return YES;
-//                } else {
-//                    // 第一次点击删除按钮 选中
-//                    textView.selectedRange = tmpRanges;
-//                    return NO;
-//                }
-//            }
-//        }
-//
-//    }
-//    return YES;
-//}
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@""]) { // 删除
+        for (NSInteger i = 0; i < self.userRangeMutArr.count; i++) {
+            NSRange tmpRange = NSRangeFromString(self.userRangeMutArr[i]);
+            if ((range.location + range.length) == (tmpRange.location + tmpRange.length)) {
+                if ([NSStringFromRange(tmpRange) isEqualToString:NSStringFromRange(textView.selectedRange)]) {
+                    // 第二次点击删除按钮 删除
+                    NSLog(@"打印前%@",self.userRangeMutArr);
+                    [self.userRangeMutArr removeObjectAtIndex:self.userRangeMutArr.count-1];
+                    NSLog(@"打印后%@",self.userRangeMutArr);
+                    return YES;
+                } else {
+                    // 第一次点击删除按钮 选中
+                    textView.selectedRange = tmpRange;
+                    return NO;
+                }
+            }
+        }
+    }
+    return YES;
+}
 
 @end
