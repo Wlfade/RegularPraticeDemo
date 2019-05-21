@@ -21,18 +21,26 @@
 
 @property (nonatomic,strong) NSMutableAttributedString *outAttSummary;
 
-@property (nonatomic,strong) NSMutableArray *userRangeMutArr;
+//@property (nonatomic,strong) NSMutableArray *userRangeMutArr;
+
+/// 光标位置
+@property (assign, nonatomic) NSInteger cursorLocations;
+/// 是否改变
+@property (assign, nonatomic) BOOL isChanged;
+/// 改变Range
+@property (assign, nonatomic) NSRange changeRange;
+
 @end
 
 @implementation ViewController
 
 /** userRangeMutArr */
--(NSMutableArray *)userRangeMutArr{
-    if (_userRangeMutArr == nil) {
-        _userRangeMutArr = [NSMutableArray array];
-    }
-    return _userRangeMutArr;
-}
+//-(NSMutableArray *)userRangeMutArr{
+//    if (_userRangeMutArr == nil) {
+//        _userRangeMutArr = [NSMutableArray array];
+//    }
+//    return _userRangeMutArr;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -50,7 +58,9 @@
     _editableTextView.userInteractionEnabled = YES;
     
     
-    NSString *summary = [NSString stringWithFormat:@"比如服务端给的数据的形式是这样的:转发的带有表情的hsummary<img src=\"https://img.kkbuluo.net/images/emojis/hongdan.png\" alt=\"hongdan\" class=\"face\"/> <img src=\"https://img.kkbuluo.net/images/emojis/heidan.png\" alt=\"heidan\" class=\"face\"/>《登录协议》eiigehiji bh<user userid=1234567 name=\"昵称\" class=\"nickname\"/>打开几个国际沙列个<user userid=773ig839u9fue9gu3 name=\"新的昵称\" class=\"nickname\"/>"];
+    NSString *summary = [NSString stringWithFormat:@"比如服务端给的数据的形式是这样的:转发的带有表情的hsummary<img src=\"https://img.kkbuluo.net/images/emojis/hongdan.png\" alt=\"hongdan\" class=\"face\"/> <img src=\"https://img.kkbuluo.net/images/emojis/heidan.png\" alt=\"heidan\" class=\"face\"/>《登录协议》eiigehiji bh<user userid=1234567 name=\"@昵称@\" class=\"nickname\"/>打开几个国际沙列个<user userid=773ig839u9fue9gu3 name=\"@新的昵称@\" class=\"nickname\"/>"];
+
+
     
     _originalTextView.text = summary;
     
@@ -65,6 +75,10 @@
     
     //3.将可变将可变字符串通过方法 正则获取用户昵称的数据 然后替换成一个超链接 拼接
     self.outAttSummary = [self makeUserIdFromeMutStr:self.outAttSummary];
+    
+    //4.再改一下登录协议的颜色
+    self.outAttSummary = [self makeRegularSpecailStringMutStr:self.outAttSummary withSpecialString:@"《登录协议》"];
+
     
     
     //4.获取高度
@@ -232,7 +246,6 @@
     return resultArray;
 }
 
-
 #pragma mark - 昵称富文本处理
 //将富文本中的用户昵称替换成表情后生成新的富文本
 - (NSMutableAttributedString *)makeUserIdFromeMutStr:(NSMutableAttributedString *)summaryMutStr{
@@ -266,9 +279,9 @@
         //一共少了的长度
         totalLengthChanged += lengthChanged;
         
-        NSRange userIdRange = NSMakeRange(newRange.location, nameAttString.length);
-        
-        [self.userRangeMutArr addObject:NSStringFromRange(userIdRange)];
+//        NSRange userIdRange = NSMakeRange(newRange.location, nameAttString.length);
+//
+//        [self.userRangeMutArr addObject:NSStringFromRange(userIdRange)];
 
     }
     return summaryMutStr;
@@ -331,6 +344,53 @@
     
     return rangeArrays;
 }
+
+//处理一个特殊的字符完成正则
+- (NSMutableAttributedString *)makeRegularSpecailStringMutStr:(NSMutableAttributedString *)summaryMutStr withSpecialString:(NSString *)specialStr{
+    NSArray *rangeArrays = [self getTopicRangeArray:summaryMutStr withNeedJudge:NO withSpecialString:@"《登录协议》"];
+    
+    //遍历
+    for (NSString *tempRameStr in rangeArrays) {
+        NSRange tmpRange = NSRangeFromString(tempRameStr);
+       
+        [summaryMutStr addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:tmpRange];
+    }
+    return summaryMutStr;
+}
+- (NSArray *)getTopicRangeArray:(NSAttributedString *)attributedString withNeedJudge:(BOOL)isNeed withSpecialString:(NSString *)specialStr{
+    //    NSAttributedString *traveAStr = attributedString ?: _textView.attributedText;
+    NSAttributedString *traveAStr = attributedString;
+    
+    __block NSMutableArray *rangeArray = [NSMutableArray array];
+    static NSRegularExpression *iExpression;
+//    @"@(.*?)@" //用户名正则
+//    iExpression = iExpression ?: [NSRegularExpression regularExpressionWithPattern:@"《登录协议》" options:0 error:NULL];
+    iExpression = iExpression ?: [NSRegularExpression regularExpressionWithPattern:specialStr options:0 error:NULL];
+
+    [iExpression enumerateMatchesInString:traveAStr.string
+                                  options:0
+                                    range:NSMakeRange(0, traveAStr.string.length)
+                               usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                                   NSRange resultRange = result.range;
+                                   //获取这个富文本中的 属性信息
+                                   NSDictionary *attributedDict = [traveAStr attributesAtIndex:resultRange.location effectiveRange:&resultRange];
+                                   
+                                   if (isNeed == YES) {
+                                       if ([attributedDict[NSForegroundColorAttributeName] isEqual:[UIColor greenColor]]) {
+                                           [rangeArray addObject:NSStringFromRange(result.range)];
+                                       }
+                                   }else{
+                                       [rangeArray addObject:NSStringFromRange(result.range)];
+                                   }
+                                   
+                                   
+                                   
+                               }];
+    return rangeArray;
+}
+#pragma mark - textViewDelegate
+
+//指定范围的内容与 URL 将要相互作用时激发该方法
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction{
 
     if ([[URL scheme] isEqualToString:@"userId"]) {
@@ -342,17 +402,20 @@
     }
     return YES;
 }
-
+//内容将要发生改变编辑
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    //删除功能
     if ([text isEqualToString:@""]) { // 删除
-        for (NSInteger i = 0; i < self.userRangeMutArr.count; i++) {
-            NSRange tmpRange = NSRangeFromString(self.userRangeMutArr[i]);
+        NSArray *rangeArray = [self getTopicRangeArray:self.editableTextView.attributedText withNeedJudge:YES withSpecialString:@"《登录协议》"];
+        
+        for (NSInteger i = 0; i < rangeArray.count; i++) {
+            NSRange tmpRange = NSRangeFromString(rangeArray[i]);
             if ((range.location + range.length) == (tmpRange.location + tmpRange.length)) {
                 if ([NSStringFromRange(tmpRange) isEqualToString:NSStringFromRange(textView.selectedRange)]) {
                     // 第二次点击删除按钮 删除
-                    NSLog(@"打印前%@",self.userRangeMutArr);
-                    [self.userRangeMutArr removeObjectAtIndex:self.userRangeMutArr.count-1];
-                    NSLog(@"打印后%@",self.userRangeMutArr);
+//                    NSLog(@"打印前%@",self.userRangeMutArr);
+//                    [self.userRangeMutArr removeObjectAtIndex:self.userRangeMutArr.count-1];
+//                    NSLog(@"打印后%@",self.userRangeMutArr);
                     return YES;
                 } else {
                     // 第一次点击删除按钮 选中
@@ -362,7 +425,56 @@
             }
         }
     }
+    //添加功能
+    else{
+        NSArray *rangeArray = [self getTopicRangeArray:self.editableTextView.attributedText withNeedJudge:YES withSpecialString:@"《登录协议》"];
+
+        if ([rangeArray count]) {
+            for (NSInteger i = 0; i < rangeArray.count; i++) {
+                NSRange tmpRange = NSRangeFromString(rangeArray[i]);
+                if ((range.location + range.length) == (tmpRange.location + tmpRange.length) || !range.location) {
+                    _changeRange = NSMakeRange(range.location, text.length);
+                    _isChanged = YES;
+                    return YES;
+                }
+            }
+        } else {
+            // 话题在第一个删除后 重置text color
+            if (!range.location) {
+                _changeRange = NSMakeRange(range.location, text.length);
+                _isChanged = YES;
+                return YES;
+            }
+        }
+    }
     return YES;
 }
+//焦点发生改变
+- (void)textViewDidChangeSelection:(UITextView *)textView {
+    NSArray *rangeArray = [self getTopicRangeArray:self.editableTextView.attributedText withNeedJudge:YES withSpecialString:@"《登录协议》"];
+    BOOL inRange = NO;
+    for (NSInteger i = 0; i < rangeArray.count; i++) {
+        NSRange range = NSRangeFromString(rangeArray[i]);
+        if (textView.selectedRange.location > range.location && textView.selectedRange.location < range.location + range.length) {
+            inRange = YES;
+            break;
+        }
+    }
+    if (inRange) {
+        textView.selectedRange = NSMakeRange(self.cursorLocations, textView.selectedRange.length);
+        return;
+    }
+    self.cursorLocations = textView.selectedRange.location;
+}
+//内容发生改变编辑
+- (void)textViewDidChange:(UITextView *)textView {
+    if (_isChanged) {
+        NSMutableAttributedString *tmpAString = [[NSMutableAttributedString alloc] initWithAttributedString:textView.attributedText];
+        [tmpAString setAttributes:@{ NSForegroundColorAttributeName: [UIColor blackColor], NSFontAttributeName: [UIFont systemFontOfSize:16] } range:_changeRange];
+        textView.attributedText = tmpAString;
+        _isChanged = NO;
+    }
+}
+
 
 @end
