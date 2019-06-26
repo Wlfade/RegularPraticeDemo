@@ -267,6 +267,7 @@
 
         NSString *valueString1 = [[NSString stringWithFormat:@"userId://%@",userid] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
         [nameAttString addAttribute:NSLinkAttributeName value:valueString1 range:NSMakeRange(0, nameAttString.length)];
+        [nameAttString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, nameAttString.length)];
 
 
         //获取现在需要改变的字符串的为止  新的起点 = 原来的起点 - 之前少了的长度
